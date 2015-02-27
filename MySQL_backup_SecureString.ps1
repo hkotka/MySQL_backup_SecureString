@@ -1,4 +1,4 @@
-﻿$hash = "SecureString-has goes here"
+﻿$hash = "SecureString-hash goes here"
 $password = ConvertTo-SecureString -string $hash
 $user = "backup"
 
