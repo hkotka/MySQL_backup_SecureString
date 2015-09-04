@@ -3,9 +3,13 @@ Powershell script for MySQL database backup, using hashed password
 
 The point of this script is to excecute backups from MySQL database without revealing plaintext password for the backup user account.
 
+In additon, the script compresses and encrypts the backup using 7zip.
+
 Script uses SecureString function provided by Powershell to encrypt the plaintext password into a hash form. Nice thing abut this function is that the hash is only convertable back to plaintext on a same Windows account that created the original hash. So it's not perfectly secure or anything, but it is a lot better than having the password in plain text on a script.
 
 You can use [a create_secure_password.ps1](/create_secure_password.ps1) to create hashed password.
+
+Symbolic links for mysqldump.exe and 7z.exe need to be created in script folder.
 
 **Script needs to be run on a account that created the SecureString password hash**
 
